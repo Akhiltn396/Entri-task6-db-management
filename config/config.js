@@ -1,6 +1,10 @@
+const dotenv = require("dotenv").config();
+
+
 let config = {
     dbUrl:
-      "mongodb+srv://akhil:mongo5267@cluster0.ckvaf.mongodb.net/entri-form-valid?retryWrites=true&w=majority"
+
+    process.env.MONGODB_CLOUD_URL
   };
 
   module.exports = config;

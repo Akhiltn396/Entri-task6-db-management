@@ -5,6 +5,10 @@ const User = require("./models/User");
 const mongoose = require("mongoose")
 // const dBconnect = require('./config/dbConnect');
 const config = require("./config/config");
+const dotenv = require("dotenv").config()
+
+
+
 
 const dbUrl = config.dbUrl;
 

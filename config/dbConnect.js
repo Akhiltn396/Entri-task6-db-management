@@ -1,9 +1,10 @@
 const mongoose = require("mongoose")
+const dotenv = require("dotenv").config()
 
 //storing in mongodb atlas
 module.exports.Dbconnect=async ()=>{
    try {
-    await mongoose.connect('mongodb://localhost:27017/entri-form-valid')
+    await mongoose.connect(process.env.MONGO_URL)
     console.log('db connceted');
    } catch (error) {
     console.log('db failed',error);
@@ -18,7 +19,7 @@ module.exports.Dbconnect=async ()=>{
 
 // const dbConnect = async ()=>{
 //     try {
-//        await mongoose.connect('mongodb://localhost:27017/entri-form-valid',
+//        await mongoose.connect(process.env.MONGO_URL,
 //        {
 //          useNewUrlParser: true,
 
